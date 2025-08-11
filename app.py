@@ -1,6 +1,5 @@
 from google import genai
 from google.genai import types
-from PIL import Image
 import os
 import requests
 from bs4 import BeautifulSoup
