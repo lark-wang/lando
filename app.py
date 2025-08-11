@@ -129,7 +129,7 @@ N/A
 Article: 
 """
 
-st.image("lando2.png")
+st.image("lando2.png", use_container_width=True)
 st.title("Where's Lando?")
 st.write("ESPN Article + Gemini LLM")
 
