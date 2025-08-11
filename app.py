@@ -130,21 +130,7 @@ N/A
 Article: 
 """
 
-# left_col, right_col = st.columns([4, 1])
-# with right_col:
-#     # Load your images
-    
-#     lando_image1 = Image.open("lando2.png")
-#     lando_image2 = Image.open("lando1.jpg")
-    
-#     # Stack images vertically at the top of right column
-#     st.write("")
-#     st.write("")
-#     st.image(lando_image1)
-#     st.image(lando_image2)
-
-# with left_col:
-st.image("lando2.jpg", use_column_width=True)
+st.image("lando2.png")
 st.title("Where's Lando?")
 st.write("ESPN Article + Gemini LLM")
 
