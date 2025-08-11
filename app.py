@@ -4,7 +4,6 @@ from PIL import Image
 import os
 import requests
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
 import streamlit as st
 
 
@@ -14,8 +13,6 @@ in {429, 503})
 genai.models.Models.generate_content = retry.Retry(
     predicate=is_retriable)(genai.models.Models.generate_content)
 
-# load_dotenv()
-# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 
@@ -133,42 +130,43 @@ N/A
 Article: 
 """
 
-left_col, right_col = st.columns([4, 1])
-with right_col:
-    # Load your images
+# left_col, right_col = st.columns([4, 1])
+# with right_col:
+#     # Load your images
     
-    lando_image1 = Image.open("lando2.png")
-    lando_image2 = Image.open("lando1.jpg")
+#     lando_image1 = Image.open("lando2.png")
+#     lando_image2 = Image.open("lando1.jpg")
     
-    # Stack images vertically at the top of right column
-    st.write("")
-    st.write("")
-    st.image(lando_image1)
-    st.image(lando_image2)
+#     # Stack images vertically at the top of right column
+#     st.write("")
+#     st.write("")
+#     st.image(lando_image1)
+#     st.image(lando_image2)
 
-with left_col:
-    st.title("Where's Lando? ESPN Article + Gemini LLM")
-    
-    url = st.text_input("Paste ESPN article URL here:")
-    
-    if st.button("Analyze"):
-        if url:
-            with st.spinner("Fetching article and generating response..."):
-                try:
-                    article_text = get_article_text(url)
-                    # Call Gemini API
-                    response = client.models.generate_content(
-                        model='gemini-2.0-flash',
-                        config=types.GenerateContentConfig(
-                            temperature=0,
-                            top_p=1,
-                            max_output_tokens=250,
-                        ),
-                        contents=[few_shot_prompt, article_text]
-                    )
-                    st.subheader("Gemini Response")
-                    st.write(response.text)
-                except Exception as e:
-                    st.error(f"Error: {e}")
-        else:
-            st.warning("Please enter a valid URL.")
+# with left_col:
+st.image("lando2.jpg", use_column_width=True)
+st.title("Where's Lando?")
+st.write("ESPN Article + Gemini LLM")
+
+url = st.text_input("Paste ESPN article URL here:")
+
+if st.button("Find Lando!"):
+    if url:
+        with st.spinner("Fetching article and generating response..."):
+            try:
+                article_text = get_article_text(url)
+                response = client.models.generate_content(
+                    model='gemini-2.0-flash',
+                    config=types.GenerateContentConfig(
+                        temperature=0,
+                        top_p=1,
+                        max_output_tokens=250,
+                    ),
+                    contents=[few_shot_prompt, article_text]
+                )
+                st.subheader("Gemini Response")
+                st.write(response.text)
+            except Exception as e:
+                st.error(f"Error: {e}")
+    else:
+        st.warning("Please enter a valid URL.")

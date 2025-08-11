@@ -1,8 +1,6 @@
 streamlit
 google-genai
 google-api-core
-protobuf
-python-dotenv
 requests
 beautifulsoup4
-Pillow
+Pillowx
