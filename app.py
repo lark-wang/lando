@@ -34,7 +34,7 @@ def get_article_text(url):
 few_shot_prompt = """ Use an ESPN article summarizing a Grand Prix to answer some questions about Formula 1 Driver Lando Norris. Only use
 information from the article. If the information is not in the article, respond with N/A. 
 
-General instructions: For every questions except for the first question (Race), put the response on a second line. 
+General instructions: For every question except for the first question, put the question and answer on separate lines. 
 
 Specfic instructions by question: 
 1. Race: If the name of the Grand Prix refers to the country, put the city in parentheses next to it. For instance, for the Hungarian Grand Prix, put "Hungarian Grand Prix (Budapest)". For the Miami Grand Prix, just put "Miami Grand Prix". 
@@ -43,7 +43,7 @@ Specfic instructions by question:
 4. Is Lando higher than Oscar now in the overall driver's championship standings? Either put "Yes :)" or "No :(". 
 5. How did Lando feel about the race? Restrict this output to a one-word adjective. 
 6. Notable events in the race for Lando: Restrict this output to one sentence. Put N/A if there were not any notable events. Failing to catch the race leader from second place is not a notable event. 
-7. Notable quotes: Restrict output to five total sentences or less. Only put direct quotations that Lando said without any descriptors like "he said". Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. 
+7. Notable quotes: Restrict output to five total sentences or less. Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. Do not include dialogue tags. 
 
 EXAMPLE: 
 
