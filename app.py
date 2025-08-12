@@ -34,7 +34,7 @@ def get_article_text(url):
 few_shot_prompt = """ Use an ESPN article summarizing a Grand Prix to answer some questions about Formula 1 Driver Lando Norris. Only use
 information from the article. If the information is not in the article, respond with N/A. 
 
-General instructions: For every question except for the first question, put a blank line between the question and answer. 
+General instructions: For every question except for the first question, put a blank line between the question and answer. Indent the answer.
 
 Specfic instructions by question: 
 1. Race: If the name of the Grand Prix refers to the country, put the city in parentheses next to it. For instance, for the Hungarian Grand Prix, put "Hungarian Grand Prix (Budapest)". For the Miami Grand Prix, just put "Miami Grand Prix". 
@@ -43,7 +43,7 @@ Specfic instructions by question:
 4. Is Lando higher than Oscar now in the overall driver's championship standings? Either put "Yes :)" or "No :(". 
 5. How did Lando feel about the race? Restrict this output to a one-word adjective. 
 6. Notable events in the race for Lando: Restrict this output to one sentence. Put N/A if there were not any notable events. Failing to catch the race leader from second place is not a notable event. 
-7. Notable quotes: Restrict output to five total sentences or less. Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. Only put direct quotations - do not include dialogue tags or descriptions of what was said. 
+7. Notable quotes: Restrict output to five total sentences or less. Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. If there are not any punchy quotes, lean toward putting less or none. Only put direct quotations - do not include dialogue tags or descriptions of what was said. Put a blank line between each separate quote. 
 
 EXAMPLE: 
 
@@ -55,27 +55,27 @@ Race: Hungarian Grand Prix (Budapest)
 
 Where did Lando finish? 
 
-First place!
+    First place!
 
 Did Lando do better than Oscar? 
 
-Yes :)
+    Yes :)
 
 Is Lando higher than Oscar now in the overall driver's championship standings? 
 
-No :(
+    No :(
 
 How did Lando feel about the race? 
 
-Ecstatic
+    Ecstatic
 
 Notable events in the race for Lando: 
 
-Lando made one stops instead of two after falling into fifth place in the first lap. 
+    Lando made one stops instead of two after falling into fifth place in the first lap. 
 
 Notable quotes: 
 
-N/A
+    N/A
 
 EXAMPLE: 
 
@@ -87,28 +87,29 @@ Race: Miami Grand Prix
 
 Where did Lando finish? 
 
-Second place!
+    Second place!
 
 Did Lando do better than Oscar? 
 
-No :(
+    No :(
 
 Is Lando higher than Oscar now in the overall driver's championship standings? 
 
-No :(
+    No :(
 
 How did Lando feel about the race? 
 
-Okay
+    Okay
 
 Notable events in the race for Lando: 
 
-N/A
+    N/A
 
 Notable quotes: 
 
-"What can I say? If I don't go for it, people complain. If I go for it, people complain, so you can't win."
-"I paid the price for not doing a good enough job today, but I'm still happy with second."
+    "What can I say? If I don't go for it, people complain. If I go for it, people complain, so you can't win."
+
+    "I paid the price for not doing a good enough job today, but I'm still happy with second."
 
 
 EXAMPLE: 
@@ -121,27 +122,27 @@ Race: Canadian Grand Prix (Montreal)
 
 Where did Lando finish? 
 
-Did not finish :( 
+    Did not finish :( 
 
 Did Lando do better than Oscar? 
 
-No :(
+    No :(
 
 Is Lando higher than Oscar now in the overall driver's championship standings? 
 
-No :(
+    No :(
 
 How did Lando feel about the race? 
 
-Self-reflective
+    Self-reflective
 
 Notable events in the race for Lando: 
 
-Lando crashed into Oscar and had to retire, while Oscar still finished the race. 
+    Lando crashed into Oscar and had to retire, while Oscar still finished the race. 
 
 Notable quotes: 
 
-"Sorry...All my bad. All my fault. Stupid from me."
+    "Sorry...All my bad. All my fault. Stupid from me."
 
 """
 
