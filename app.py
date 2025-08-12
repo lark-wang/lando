@@ -153,10 +153,18 @@ st.write("In the ongoing 2025 Formula 1 season, drivers Lando Norris and Oscar P
 st.write("")
 st.write("""Sample race report links:
 1. https://www.espn.com/f1/story/_/id/44220323/lando-norris-holds-max-verstappen-win-thrilling-race  
-2. https://www.espn.com/f1/story/_/id/44504134/max-verstappen-beats-mclarens-fourth-straight-win  
-3. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
-4. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead  
-5. https://www.espn.com/f1/story/_/id/44315881/oscar-piastri-wins-dominant-mclaren-claim-one-two""")
+2. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
+3. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead""")
+st.write("")
+
+st.markdown("""
+    <style>
+    label[data-baseweb="label"] {
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 url = st.text_input("Paste ESPN article URL here:")
 
