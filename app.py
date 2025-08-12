@@ -39,8 +39,8 @@ General instructions: For every question except for the first question, put a bl
 Specfic instructions by question: 
 1. Race: If the name of the Grand Prix refers to the country, put the city in parentheses next to it. For instance, for the Hungarian Grand Prix, put "Hungarian Grand Prix (Budapest)". For the Miami Grand Prix, just put "Miami Grand Prix". 
 2. Where did Lando finish? If Lando finished in the top three, put an exclamation mark at the end (ex. First place!). If Lando did not finish the race, put "Did not finish :(". Otherwise, don't put any punctuation at the end. 
-3. Did Lando do better than Oscar? Either put "Yes :)" or "No :(". 
-4. Is Lando higher than Oscar now in the overall driver's championship standings? Either put "Yes :)" or "No :(". 
+3. Did Lando do better than Oscar? Put "Yes :)" or "No :(" or "Not Mentioned". 
+4. Is Lando higher than Oscar now (as of this race) in the overall driver's championship standings? Put "Yes :)" or "No :(" or "Not Mentioned". 
 5. How did Lando feel about the race? Restrict this output to a one-word adjective. 
 6. Notable events in the race for Lando: Restrict this output to one sentence. Put N/A if there were not any notable events. Failing to catch the race leader from second place is not a notable event. 
 7. Notable quotes: Restrict output to five total sentences or less. Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. If there are not any punchy quotes, lean toward putting less or none. Put a blank line between each separate quote. Important: only put direct quotations of what was said - do not include dialogue tags or any descriptions of what was said.  
@@ -149,7 +149,7 @@ Notable quotes:
 
 st.image("lando2.png", use_container_width=True)
 st.title("Where's Lando? ")
-st.write("ESPN Article + Gemini LLM")
+st.write("In the ongoing 2025 Formula 1 season, drivers Lando Norris and Oscar Piastri are competing in an intense battle for the driver’s championship. Using the Google Gemini API with few-shot prompting, this app takes an ESPN race report URL and outputs some information about Lando’s performance. Sample race report links are listed at the bottom of the page.")
 
 url = st.text_input("Paste ESPN article URL here:")
 
@@ -173,3 +173,11 @@ if st.button("Find Lando!"):
                 st.error(f"Error: {e}")
     else:
         st.warning("Please enter a valid URL.")
+
+st.write("Sample race report links:")
+st.write("1. https://www.espn.com/f1/story/_/id/44220323/lando-norris-holds-max-verstappen-win-thrilling-race")
+st.write("2. https://www.espn.com/f1/story/_/id/44504134/max-verstappen-beats-mclarens-fourth-straight-win")
+st.write("3. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp")
+st.write("4. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead")
+st.write("5. https://www.espn.com/f1/story/_/id/44315881/oscar-piastri-wins-dominant-mclaren-claim-one-two")
+
