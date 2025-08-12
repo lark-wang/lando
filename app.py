@@ -157,7 +157,7 @@ st.write("""Sample race report links:
 3. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead""")
 st.write("")
 
-st.markdown("### Paste ESPN article URL here:")
+st.write("Paste ESPN article URL here:")
 url = st.text_input("", placeholder="https://...")
 
 if st.button("Find Lando!"):
