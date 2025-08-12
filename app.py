@@ -151,8 +151,8 @@ st.image("lando2.png", use_container_width=True)
 st.title("Where's Lando? ")
 st.write("In the ongoing 2025 Formula 1 season, drivers Lando Norris and Oscar Piastri are competing in an intense battle for the championship. This app takes an ESPN race report URL and outputs some information about Lando’s performance, using the Google Gemini API with few-shot prompting. ")
 st.write("")
-st.write("Sample race report links:")
-st.write("""1. https://www.espn.com/f1/story/_/id/44220323/lando-norris-holds-max-verstappen-win-thrilling-race  
+st.write("""Sample race report links:
+1. https://www.espn.com/f1/story/_/id/44220323/lando-norris-holds-max-verstappen-win-thrilling-race  
 2. https://www.espn.com/f1/story/_/id/44504134/max-verstappen-beats-mclarens-fourth-straight-win  
 3. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
 4. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead  
