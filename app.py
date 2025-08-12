@@ -43,7 +43,7 @@ Specfic instructions by question:
 4. Is Lando higher than Oscar now in the overall driver's championship standings? Either put "Yes :)" or "No :(". 
 5. How did Lando feel about the race? Restrict this output to a one-word adjective. 
 6. Notable events in the race for Lando: Restrict this output to one sentence. Put N/A if there were not any notable events. Failing to catch the race leader from second place is not a notable event. 
-7. Notable quotes: Restrict output to five total sentences or less. Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. If there are not any punchy quotes, lean toward putting less or none. Only put direct quotations - do not include dialogue tags or descriptions of what was said. Put a blank line between each separate quote. 
+7. Notable quotes: Restrict output to five total sentences or less. Lean toward only choosing quotes which contain a punchy sentiment, as opposed to technical commentary. If there are not any punchy quotes, lean toward putting less or none. Put a blank line between each separate quote. Important: only put direct quotations of what was said - do not include dialogue tags or any descriptions of what was said.  
 
 EXAMPLE: 
 
