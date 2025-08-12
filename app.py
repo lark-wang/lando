@@ -39,7 +39,7 @@ General instructions: For every question except for the first question, put a bl
 Specfic instructions by question: 
 1. Race: If the name of the Grand Prix refers to the country, put the city in parentheses next to it. For instance, for the Hungarian Grand Prix, put "Hungarian Grand Prix (Budapest)". For the Miami Grand Prix, just put "Miami Grand Prix". 
 2. Where did Lando finish? If Lando finished in the top three, put an exclamation mark at the end (ex. First place!). If Lando did not finish the race, put "Did not finish :(". Otherwise, don't put any punctuation at the end. 
-3. Did Lando do better than Oscar? Put "Yes :)" or "No :(" or "Not Mentioned". 
+3. Did Lando do better than Oscar? Put "Yes :)" or "No :(" or "Not Mentioned". If Lando finished in first place, then that means he did better than Oscar.
 4. Is Lando higher than Oscar now (as of this race) in the overall driver's championship standings? Put "Yes :)" or "No :(" or "Not Mentioned". 
 5. How did Lando feel about the race? Restrict this output to a one-word adjective. 
 6. Notable events in the race for Lando: Restrict this output to one sentence. Put N/A if there were not any notable events. Failing to catch the race leader from second place is not a notable event. 
@@ -152,9 +152,9 @@ st.title("Where's Lando? ")
 st.write("In the ongoing 2025 Formula 1 season, drivers Lando Norris and Oscar Piastri are competing in an intense battle for the championship. This app takes an ESPN race report URL and outputs some information about Lando’s performance, using the Google Gemini API with few-shot prompting. ")
 st.write("")
 st.write("""Sample race report links:
-1. https://www.espn.com/f1/story/_/id/44220323/lando-norris-holds-max-verstappen-win-thrilling-race  
-2. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
-3. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead""")
+1. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
+2. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead
+3. https://www.espn.com/f1/story/_/id/45252751/lando-norris-holds-charles-leclerc-take-first-monaco-win""")
 st.write("")
 st.write("")
 url = st.text_input("Paste ESPN article URL here:")
