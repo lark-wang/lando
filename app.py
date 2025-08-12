@@ -54,21 +54,27 @@ Response:
 Race: Hungarian Grand Prix (Budapest)
 
 Where did Lando finish? 
+
 First place!
 
 Did Lando do better than Oscar? 
+
 Yes :)
 
 Is Lando higher than Oscar now in the overall driver's championship standings? 
+
 No :(
 
 How did Lando feel about the race? 
+
 Ecstatic
 
 Notable events in the race for Lando: 
+
 Lando made one stops instead of two after falling into fifth place in the first lap. 
 
 Notable quotes: 
+
 N/A
 
 EXAMPLE: 
@@ -80,21 +86,27 @@ Response:
 Race: Miami Grand Prix
 
 Where did Lando finish? 
+
 Second place!
 
 Did Lando do better than Oscar? 
+
 No :(
 
 Is Lando higher than Oscar now in the overall driver's championship standings? 
+
 No :(
 
 How did Lando feel about the race? 
+
 Okay
 
 Notable events in the race for Lando: 
+
 N/A
 
 Notable quotes: 
+
 "What can I say? If I don't go for it, people complain. If I go for it, people complain, so you can't win."
 "I paid the price for not doing a good enough job today, but I'm still happy with second."
 
@@ -108,22 +120,28 @@ Response:
 Race: Canadian Grand Prix (Montreal)
 
 Where did Lando finish? 
+
 Did not finish :( 
 
 Did Lando do better than Oscar? 
+
 No :(
 
 Is Lando higher than Oscar now in the overall driver's championship standings? 
+
 No :(
 
 How did Lando feel about the race? 
+
 Self-reflective
 
 Notable events in the race for Lando: 
+
 Lando crashed into Oscar and had to retire, while Oscar still finished the race. 
 
 Notable quotes: 
-"All my bad. All my fault."
+
+"Sorry...All my bad. All my fault. Stupid from me."
 
 """
 
