@@ -158,7 +158,7 @@ st.write("""Sample race report links:
 st.write("")
 st.write("")
 #url = st.text_input("Paste ESPN article URL here:")
-url = st.text_input(r"$\textsf{\Large Paste ESPN article URL here:}$")
+url = st.text_input(r"$\text{\normalsize Paste ESPN article URL here:}$")
                     
 if st.button("Find Lando!"):
     if url:
