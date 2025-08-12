@@ -38,7 +38,7 @@ General instructions: For every question except for the first question, put a bl
 
 Specfic instructions by question: 
 1. Race: If the name of the Grand Prix refers to the country, put the city in parentheses next to it. For instance, for the Hungarian Grand Prix, put "Hungarian Grand Prix (Budapest)". For the Miami Grand Prix, just put "Miami Grand Prix". 
-2. Where did Lando finish? If Lando finished in the top three, put an exclamation mark at the end (ex. First place!). If Lando did not finish the race, put "Did not finish :(". Otherwise, don't put any punctuation at the end. 
+2. Where did Lando finish? If Lando finished in first, second, or third place, put an exclamation mark at the end (ex. Second place!). If Lando did not finish the race, put "Did not finish :(". Otherwise, don't put any punctuation at the end. 
 3. Did Lando do better than Oscar? Put "Yes :)" or "No :(" or "Not Mentioned". If Lando finished in first place, then that means he did better than Oscar.
 4. Is Lando higher than Oscar now (as of this race) in the overall driver's championship standings? Put "Yes :)" or "No :(" or "Not Mentioned". 
 5. How did Lando feel about the race? Restrict this output to a one-word adjective. 
@@ -61,7 +61,7 @@ Did Lando do better than Oscar?
 
     Yes :)
 
-Is Lando higher than Oscar now in the overall driver's championship standings? 
+Is Lando higher than Oscar now (as of this race) in the overall driver's championship standings? 
 
     No :(
 
@@ -73,7 +73,7 @@ Notable events in the race for Lando:
 
     Lando made one stops instead of two after falling into fifth place in the first lap. 
 
-Notable quotes: 
+Notable quotes from Lando: 
 
     N/A
 
@@ -93,7 +93,7 @@ Did Lando do better than Oscar?
 
     No :(
 
-Is Lando higher than Oscar now in the overall driver's championship standings? 
+Is Lando higher than Oscar now (as of this race) in the overall driver's championship standings? 
 
     No :(
 
@@ -105,7 +105,7 @@ Notable events in the race for Lando:
 
     N/A
 
-Notable quotes: 
+Notable quotes from Lando: 
 
     "What can I say? If I don't go for it, people complain. If I go for it, people complain, so you can't win."
 
@@ -128,7 +128,7 @@ Did Lando do better than Oscar?
 
     No :(
 
-Is Lando higher than Oscar now in the overall driver's championship standings? 
+Is Lando higher than Oscar now (as of this race) in the overall driver's championship standings? 
 
     No :(
 
@@ -140,7 +140,7 @@ Notable events in the race for Lando:
 
     Lando crashed into Oscar and had to retire, while Oscar still finished the race. 
 
-Notable quotes: 
+Notable quotes from Lando: 
 
     "Sorry...All my bad. All my fault. Stupid from me."
 
@@ -149,7 +149,7 @@ Notable quotes:
 
 st.image("lando2.png", use_container_width=True)
 st.title("Where's Lando? ")
-st.write("In the ongoing 2025 Formula 1 season, drivers Lando Norris and Oscar Piastri are competing in an intense battle for the championship. This app takes an ESPN race report URL and outputs some information about Lando’s performance, using the Google Gemini API with few-shot prompting. ")
+st.write("In the ongoing 2025 Formula 1 season, drivers Lando Norris and Oscar Piastri are competing in an intense battle for the championship. This app takes an ESPN race report URL and outputs information about Lando’s performance, using the Google Gemini API with few-shot prompting. ")
 st.write("")
 st.write("""Sample race report links:
 1. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
