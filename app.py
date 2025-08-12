@@ -156,9 +156,8 @@ st.write("""Sample race report links:
 2. https://www.espn.com/f1/story/_/id/45645622/norris-beats-piastri-wet-dramatic-british-gp  
 3. https://www.espn.com/f1/story/_/id/45803070/dominant-oscar-piastri-wins-belgian-gp-extends-f1-championship-lead""")
 st.write("")
-
-st.write("Paste ESPN article URL here:")
-url = st.text_input("", placeholder="https://...")
+st.write("")
+url = st.text_input("Paste ESPN article URL here:")
 
 if st.button("Find Lando!"):
     if url:
