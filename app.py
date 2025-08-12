@@ -160,7 +160,7 @@ st.write("")
 st.markdown("""
     <style>
     label[data-baseweb="label"] {
-        font-size: 20px !important;
+        font-size: 40px !important;
         font-weight: bold;
     }
     </style>
