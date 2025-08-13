@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 import streamlit as st
 
+# Based on https://www.kaggle.com/code/markishere/day-1-prompting
 
 from google.api_core import retry
 is_retriable = lambda e: (isinstance(e, genai.errors.APIError) and e.code 
@@ -158,7 +159,6 @@ st.write("""Sample race report links:
 st.write("")
 st.write("")
 url = st.text_input("Paste ESPN article URL here:")
-#url = st.text_input(r"$\text{\normalsize Paste ESPN article URL here:}$")
                     
 if st.button("Find Lando!"):
     if url:
