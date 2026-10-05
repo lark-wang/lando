@@ -166,7 +166,7 @@ if st.button("Find Lando!"):
             try:
                 article_text = get_article_text(url)
                 response = client.models.generate_content(
-                    model='gemini-2.0-flash',
+                    model='gemini-3.8-flash',
                     config=types.GenerateContentConfig(
                         temperature=0,
                         top_p=1,
