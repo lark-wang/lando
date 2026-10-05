@@ -172,7 +172,12 @@ if st.button("Find Lando!"):
                         top_p=1,
                         max_output_tokens=250,
                     ),
-                    contents=[few_shot_prompt, article_text]
+                    contents=[
+                            few_shot_prompt,
+                            "\n\nNow analyze the following ESPN article:\n\n",
+                            article_text,
+                            "\n\nProvide the requested response based only on this article."
+                            ]
                 )
                 st.subheader("Gemini Response")
                 st.write(response.text)
