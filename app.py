@@ -24,6 +24,13 @@ def get_article_text(url):
     st.write(url)
     r = requests.get(url, headers=headers)
     st.write(r)
+    st.write("Status:", r.status_code)
+    st.write("URL:", r.url)
+    st.write("Content-Type:", r.headers.get("Content-Type"))
+    st.write("Response length:", len(r.text))
+    
+    st.write("Response:")
+    st.code(r.text[:2000])
     soup = BeautifulSoup(r.text, "html.parser")
     st.write(soup.find_all("p"))
     paragraphs = [p.get_text() for p in soup.find_all("p")]
