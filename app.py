@@ -178,7 +178,9 @@ if st.button("Find Lando!"):
                             ]
                 )
                 st.subheader("Gemini Response")
+                st.write("filler")
                 st.write(article_text)
+                st.write("filler")
                 st.write(response.text)
             except Exception as e:
                 st.error(f"Error: {e}")
