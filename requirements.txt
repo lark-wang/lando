@@ -1,5 +1,5 @@
 streamlit
 google-genai
 google-api-core
-requests==2.32.4
+requests
 beautifulsoup4
