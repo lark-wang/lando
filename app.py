@@ -166,17 +166,15 @@ if st.button("Find Lando!"):
             try:
                 article_text = get_article_text(url)
                 response = client.models.generate_content(
-                    model='gemini-3.8-flash',
+                    model='gemini-3.5-flash',
                     config=types.GenerateContentConfig(
                         temperature=0,
                         top_p=1,
-                        max_output_tokens=250,
+                        max_output_tokens=5000,
                     ),
                     contents=[
                             few_shot_prompt,
-                            "\n\nNow analyze the following ESPN article:\n\n",
-                            article_text,
-                            "\n\nProvide the requested response based only on this article."
+                            article_text
                             ]
                 )
                 st.subheader("Gemini Response")
