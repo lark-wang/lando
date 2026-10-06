@@ -5,6 +5,10 @@ import requests
 from bs4 import BeautifulSoup
 import streamlit as st
 
+st.write("Streamlit:", st.__version__)
+st.write("Requests:", requests.__version__)
+st.write("BeautifulSoup:", bs4.__version__)
+
 # Based on https://www.kaggle.com/code/markishere/day-1-prompting
 
 from google.api_core import retry
