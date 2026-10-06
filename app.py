@@ -20,9 +20,12 @@ client = genai.Client(api_key=GOOGLE_API_KEY)
 
 def get_article_text(url):
     headers = {"User-Agent": "Mozilla/5.0"}
+    st.write("starting")
+    st.write(url)
     r = requests.get(url, headers=headers)
+    st.write(r)
     soup = BeautifulSoup(r.text, "html.parser")
-
+    st.write(soup.find_all("p"))
     paragraphs = [p.get_text() for p in soup.find_all("p")]
 
     if len(paragraphs) > 1:
