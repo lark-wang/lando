@@ -165,6 +165,9 @@ if st.button("Find Lando!"):
         with st.spinner("Fetching article and generating response..."):
             try:
                 article_text = get_article_text(url)
+                st.write("filler")
+                st.write(article_text)
+                st.write("filler")
                 response = client.models.generate_content(
                     model='gemini-3.5-flash',
                     config=types.GenerateContentConfig(
@@ -178,9 +181,6 @@ if st.button("Find Lando!"):
                             ]
                 )
                 st.subheader("Gemini Response")
-                st.write("filler")
-                st.write(article_text)
-                st.write("filler")
                 st.write(response.text)
             except Exception as e:
                 st.error(f"Error: {e}")
