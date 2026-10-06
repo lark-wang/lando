@@ -22,7 +22,8 @@ def get_article_text(url):
     headers = {"User-Agent": "Mozilla/5.0"}
     st.write("starting")
     st.write(url)
-    r = requests.get(url, headers=headers)
+    #r = requests.get(url, headers=headers)
+    r = requests.get(url)
     soup = BeautifulSoup(r.text, "html.parser")
     st.write(soup.find_all("p"))
     paragraphs = [p.get_text() for p in soup.find_all("p")]
@@ -167,6 +168,9 @@ if st.button("Find Lando!"):
         with st.spinner("Fetching article and generating response..."):
             try:
                 article_text = get_article_text(url)
+                st.write("filler")
+                st.write(article_text)
+                st.write("filler")
                 response = client.models.generate_content(
                     model='gemini-3.5-flash',
                     config=types.GenerateContentConfig(
