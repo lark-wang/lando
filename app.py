@@ -2,13 +2,8 @@ from google import genai
 from google.genai import types
 import os
 import requests
-import bs4
 from bs4 import BeautifulSoup
 import streamlit as st
-
-st.write("Streamlit:", st.__version__)
-st.write("Requests:", requests.__version__)
-st.write("BeautifulSoup:", bs4.__version__)
 
 # Based on https://www.kaggle.com/code/markishere/day-1-prompting
 
@@ -28,14 +23,6 @@ def get_article_text(url):
     st.write("starting")
     st.write(url)
     r = requests.get(url, headers=headers)
-    st.write(r)
-    st.write("Status:", r.status_code)
-    st.write("URL:", r.url)
-    st.write("Content-Type:", r.headers.get("Content-Type"))
-    st.write("Response length:", len(r.text))
-    
-    st.write("Response:")
-    st.code(r.text[:2000])
     soup = BeautifulSoup(r.text, "html.parser")
     st.write(soup.find_all("p"))
     paragraphs = [p.get_text() for p in soup.find_all("p")]
@@ -180,9 +167,6 @@ if st.button("Find Lando!"):
         with st.spinner("Fetching article and generating response..."):
             try:
                 article_text = get_article_text(url)
-                st.write("filler")
-                st.write(article_text)
-                st.write("filler")
                 response = client.models.generate_content(
                     model='gemini-3.5-flash',
                     config=types.GenerateContentConfig(
