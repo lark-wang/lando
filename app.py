@@ -19,11 +19,25 @@ GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
 def get_article_text(url):
-    headers = {"User-Agent": "Mozilla/5.0"}
+    #headers = {"User-Agent": "Mozilla/5.0"}
+    headers = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/153.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+                }
     st.write("starting")
     st.write(url)
     #r = requests.get(url, headers=headers)
-    r = requests.get(url)
+    r = requests.get(
+    url,
+    headers=headers,
+    timeout=10,
+    allow_redirects=True
+    )
     soup = BeautifulSoup(r.text, "html.parser")
     st.write(soup.find_all("p"))
     paragraphs = [p.get_text() for p in soup.find_all("p")]
