@@ -165,6 +165,7 @@ if st.button("Find Lando!"):
         with st.spinner("Fetching article and generating response..."):
             try:
                 article_text = get_article_text(url)
+                st.write(article_text)
                 response = client.models.generate_content(
                     model='gemini-3.5-flash',
                     config=types.GenerateContentConfig(
